@@ -1,4 +1,11 @@
-Her er vores projekt
-====================
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Kulturagenten</title>
 
-lorem ...
+</head>
+
+Kulturagenten
+
+</html>
