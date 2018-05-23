@@ -1,0 +1,52 @@
+body {
+    background-color: #D0DAE2;
+    font-family: 'Open Sans', Arial, sans-serif;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    flex-wrap: wrap;
+    display: flex;
+	justify-content: center;
+}
+
+li {
+    float: right;
+}
+
+ul li:not(:last-child) {
+	margin-right: 20px;
+}
+
+ul a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+ul a:hover {
+    
+    font-size: 28px;
+}
+	
+
+ul > span {
+	position: absolute;
+	border-bottom: 4px solid transparent;
+	z-index: -1;
+	transform: translateX(-60px);
+}
+
+/*Beskriver måden stregen fremgår på, ved hover (under teksten)*/
+
+ul a,
+ul > span {
+	transition: all .35s ease-in-out;
+}

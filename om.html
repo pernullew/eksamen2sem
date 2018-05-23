@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*Navigationsbar*/
+
+        .mynav ul {
+            display: flex;
+            justify-content: center;
+            float: right;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+
+        }
+
+        .mynav li:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        .mynav a {
+            display: block;
+            font-size: 27px;
+            color: black;
+            text-decoration: none;
+            padding: 7px 15px;
+        }
+
+        .target {
+            position: absolute;
+            border-bottom: 4px solid transparent;
+            z-index: -1;
+            transform: translateX(-60px);
+        }
+
+        .mynav a,
+        .target {
+            transition: all .35s ease-in-out;
+        }
+
+        body {
+            background-color: #D0DAE2;
+            font-family: 'Open Sans', Arial, sans-serif;
+
+        }
+
+        footer {
+            padding: 1em;
+            color: white;
+            background-color: #F7D5C6;
+            clear: left;
+            text-align: center;
+        }
+
+        /*Text over bogen*/
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: black;
+            font-family: Apple Chancery, cursive;
+            font-size: 45px;
+        }
+
+        .top-center {
+            position: absolute;
+            top: 115px;
+            left: 30%;
+        }
+        
+        /*lyserød bølge*/
+        .bolge {
+            right: 500px;
+            position: relative;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="mynav">
+        <ul>
+            <li>
+                <a href="kontakt.html">Kontakt</a>
+            </li>
+            <li>
+                <a href="cases.html">Anbefalinger</a>
+            </li>
+            <li>
+                <a href="Portfolio.html">Arrangementer</a>
+            </li>
+            <li>
+                <a href="index.html">Om Kulturagenten</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <span class="target"></span>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <center><img src="Billeder/bog-billede.png" width="1550" height="750"></center>
+        <div class="top-center">Med kufferten fuld af sanser, eventyr,
+            <br>kunst og kultur til børn</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="bolge">
+       <img src="Billeder/Billede1.png" width="2170px" height="700px"> 
+        
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    
+     <center><iframe src="https://snapwidget.com/embed/547320" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:590px; height:590px"></iframe></center>
+    <br>
+    <br>
+
+    <footer>
+        <a href=https://www.facebook.com/kulturagenten><img src="Billeder/facebook.png" width="50" height="50"></a>
+
+        <a href=https://www.instagram.com/kulturagenten><img src="Billeder/insta.png" width="50" height="50"></a>
+
+        <a href=https://www.linkedin.com/in/mia-christina-broe-jakobsen-82a69a13/?trk=nav_responsive_tab_profile><img src="Billeder/linkedin.png" width="50" height="50"></a>
+        <br> Copyright 2018 &copy; All Rights Reserved</footer>
+
+
+    <script>
+        const target = document.querySelector(".target");
+        const links = document.querySelectorAll(".mynav a");
+        const colors = ["#F7D5C6", "#DF9283", "#C94649", "#FCE7DF", "#F2EBDA", "#F2EBDA ", "#8B9E9B"];
+
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", (e) => e.preventDefault());
+            links[i].addEventListener("mouseenter", mouseenterFunc);
+        }
+
+
+        function mouseenterFunc() {
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].parentNode.classList.contains("active")) {
+                    links[i].parentNode.classList.remove("active");
+                }
+                links[i].style.opacity = "0.25";
+            }
+
+            this.parentNode.classList.add("active");
+            this.style.opacity = "1";
+
+            const width = this.getBoundingClientRect().width;
+            const height = this.getBoundingClientRect().height;
+            const left = this.getBoundingClientRect().left;
+            const top = this.getBoundingClientRect().top;
+            const color = colors[Math.floor(Math.random() * colors.length)];
+
+            target.style.width = `${width}px`;
+            target.style.height = `${height}px`;
+            target.style.left = `${left}px`;
+            target.style.top = `${top}px`;
+            target.style.borderColor = color;
+            target.style.transform = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>
