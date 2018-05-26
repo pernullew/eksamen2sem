@@ -1,45 +1,37 @@
-const colors = ['deepskyblue', 'orange', 'firebrick', 'gold', 'magenta', 'black', 'darkblue'];
 
-const navSelector = '[c-hover-after]';
-const linkSelector = `${ navSelector } > * > a`;
-const targetSelector = `${ navSelector } > span`;
+        const target = document.querySelector(".target");
+        const links = document.querySelectorAll(".mynav a");
+        const colors = ["#F7D5C6", "#DF9283", "#C94649", "#FCE7DF", "#F2EBDA", "#F2EBDA ", "#8B9E9B"];
 
-Array.from(
-	document.querySelectorAll(navSelector)
-).forEach(
-	(menu) => {
-		const target = menu.querySelector(targetSelector);
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", (e) => e.preventDefault());
+            links[i].addEventListener("mouseenter", mouseenterFunc);
+        }
 
-		menu.addEventListener('focusin', onenter);
-		menu.addEventListener('pointerover', onenter);
 
-		window.addEventListener('resize', onresize);
+        function mouseenterFunc() {
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].parentNode.classList.contains("active")) {
+                    links[i].parentNode.classList.remove("active");
+                }
+                links[i].style.opacity = "0.25";
+            }
 
-		function onenter(event) {
-			const target = event.target.closest(linkSelector);
+            this.parentNode.classList.add("active");
+            this.style.opacity = "1";
 
-			if (target) {
-				styleTargetBy(target);
-			}
-		}
+            const width = this.getBoundingClientRect().width;
+            const height = this.getBoundingClientRect().height;
+            const left = this.getBoundingClientRect().left;
+            const top = this.getBoundingClientRect().top;
+            const color = colors[Math.floor(Math.random() * colors.length)];
 
-		function onresize() {
-			if (document.activeElement.closest(linkSelector)) {
-				styleTargetBy(document.activeElement);
-			} else {
-				target.style.width = '';
-			}
-		}
+            target.style.width = `${width}px`;
+            target.style.height = `${height}px`;
+            target.style.left = `${left}px`;
+            target.style.top = `${top}px`;
+            target.style.borderColor = color;
+            target.style.transform = "none";
+        }
 
-		function styleTargetBy(source) {
-			const rect = source.getBoundingClientRect();
 
-			target.style.width = `${ rect.width }px`;
-			target.style.height = `${ rect.height }px`;
-			target.style.left = `${ rect.left + window.pageYOffset }px`;
-			target.style.top = `${ rect.top + window.pageYOffset }px`;
-			target.style.borderColor = colors[Math.floor(Math.random() * colors.length)];
-			target.style.transform = 'none';
-		}
-	}
-);
