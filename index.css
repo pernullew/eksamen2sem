@@ -1,158 +1,201 @@
   /*Navigationsbar*/
 
-        .mynav ul {
-            display: flex;
-            justify-content: center;
-            float: right;
-            flex-wrap: wrap;
-            list-style-type: none;
-            padding: 0;
+  .mynav ul {
+      display: flex;
+      justify-content: center;
+      float: right;
+      flex-wrap: wrap;
+      list-style-type: none;
+      padding: 0;
 
-        }
+  }
 
-        .mynav li:not(:last-child) {
-            margin-right: 20px;
-        }
+  .mynav li:not(:last-child) {
+      margin-right: 20px;
+  }
 
-        .mynav a {
-            display: block;
-            font-size: 27px;
-            color: black;
-            text-decoration: none;
-            padding: 7px 15px;
-        }
+  .mynav a {
+      display: block;
+      font-size: 27px;
+      color: dimgray;
+      text-decoration: none;
+      padding: 7px 15px;
+  }
 
-        .target {
-            position: absolute;
-            border-bottom: 4px solid transparent;
-            z-index: -1;
-            transform: translateX(-60px);
-        }
+  .target {
+      position: absolute;
+      border-bottom: 4px solid transparent;
+      z-index: -1;
+      transform: translateX(-60px);
+  }
 
-        .mynav a,
-        .target {
-            transition: all .35s ease-in-out;
-        }
+  .mynav a,
+  .target {
+      transition: all .35s ease-in-out;
+  }
 
-        /*Fontfamily body afgør at alt der ikke har fået en anden font, vil have Arial som fontfamily.*/
+  /*Fontfamily body afgør at alt der ikke har fået en anden font, vil have Arial som fontfamily.*/
 
-        body {
-            background-color: #D0DAE2;
-            font-family: 'Open Sans', Arial, sans-serif;
+  body {
+      background-color: #D0DAE2;
+      font-family: 'Open Sans', Arial, sans-serif;
 
-        }
-/*den lyserøde footer i bunden af siden*/
-        footer {
-            padding: 1em;
-            color: white;
-            background-color: #F7D5C6;
-            clear: left;
-            text-align: center;
-        }
+  }
 
-        /*Text over bogen*/
+  /*den lyserøde footer i bunden af siden*/
 
-        .container {
-            position: relative;
-            text-align: center;
-            color: black;
-            font-family: Apple Chancery, cursive;
-            font-size: 45px;
-        }
+  footer {
+      padding: 1em;
+      color: white;
+      background-color: #F7D5C6;
+      clear: left;
+      text-align: center;
+  }
 
-        .top-center {
-            position: absolute;
-            top: 115px;
-            left: 30%;
-        }
-/*forside arrangementtyper*/
-.tiger {
-            position: absolute;
-            top: 1570px;
-            left: 69%;
-            color: grey;
-            font-family: Apple Chancery, cursive;
-        }
-.kuffert {
-            position: absolute;
-            top: 1570px;
-            left: 43%;
-            color: grey;
-            font-family: Apple Chancery, cursive;
-        }
-.pige {
-            position: absolute;
-            top: 1570px;
-            left: 15%;
-            color: grey;
-            font-family: Apple Chancery, cursive;
-        }
+  /*Text over bogen*/
 
-        /*Flexcontainer2 anvendes på forsiden. Den sætter billede og tekst i box.*/
+  .container {
+      position: relative;
+      text-align: center;
+      color: black;
+      font-family: Apple Chancery, cursive;
+      font-size: 45px;
+  }
 
-        .flex-container2 {
-            display: flex;
-            flex-wrap: nowrap;
-            background-color: #D0DAE2;
-            width: 1200px;
-        }
+  .top-center {
+      position: absolute;
+      top: 115px;
+      left: 30%;
+  }
 
-        .flex-container2>div {
-            background-color: #D0DAE2;
-            width: 400px;
-            margin: 10px;
-            text-align: center;
-            line-height: 75px;
-            font-size: 30px;
-            padding: 20px;
-            ;
-            font-size: 20px;
-        }
+  /*forside arrangementtyper*/
 
-        #logo {
-            position: relative;
-            top: -90px;
-            right: 200px;
-        }
+  .tiger {
+      position: absolute;
+      top: 1570px;
+      left: 69%;
+      color: grey;
+      font-family: Apple Chancery, cursive;
+  }
 
-        /*Grid der bruges til arrangementer på forsiden*/
+  .kuffert {
+      position: absolute;
+      top: 1570px;
+      left: 43%;
+      color: grey;
+      font-family: Apple Chancery, cursive;
+  }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 60px;
-            background-color: #D0DAE2;
-            padding: 100px;
-            
-        }
+  .pige {
+      position: absolute;
+      top: 1570px;
+      left: 15%;
+      color: grey;
+      font-family: Apple Chancery, cursive;
+  }
 
-        .grid-container>div {
-            background-color: #D0DAE2;
-            text-align: center;
-            font-size: 30px;
-        }
+  /*Flexcontainer2 anvendes på forsiden. Den sætter billede og tekst i box.*/
 
-        /*Grid til siden med arrangementtyper*/
+  .flex-container2 {
+      display: flex;
+      flex-wrap: nowrap;
+      background-color: #D0DAE2;
+      width: 1200px;
+  }
 
-        .grid-container2 {
-            display: grid;
-            grid-template-columns: auto auto auto auto;
-            grid-gap: 30px;
-            background-color: #D0DAE2;
-            padding: 70px;
-            border: 2px solid grey;
+  .flex-container2 > div {
+      background-color: #D0DAE2;
+      width: 400px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+      padding: 20px;
+      ;
+      font-size: 20px;
+  }
+
+  #logo {
+      position: relative;
+      top: -90px;
+      right: 200px;
+  }
+
+  /*Grid der bruges til arrangementer på forsiden*/
+
+  .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 60px;
+      background-color: #D0DAE2;
+      padding: 100px;
+
+  }
+
+  .grid-container > div {
+      background-color: #D0DAE2;
+      text-align: center;
+      font-size: 30px;
+  }
+
+  /*Grid til siden med kontakt*/
+
+  .grid-container2 {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 30px;
+      background-color: #D0DAE2;
+      padding: 70px;
+      border: 2px solid grey;
 
 
-        }
+  }
 
-        .grid-container2>div {
-            background-color: #D0DAE2;
-            text-align: center;
-            font-size: 30px;
+  .grid-container2 > div {
+      background-color: #D0DAE2;
+      text-align: center;
+      font-size: 30px;
 
-        }
+  }
+/*arrangementer cirkler*/
 
-.h1 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    color:grey;
-}
+  .grid-container3 {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      background-color: #D0DAE2;
+      padding: 20px;
+      grid-row-gap: 40px;
+      
+
+  }
+
+  .grid-container3 > div {
+      background-color: #D0DAE2;
+      text-align: center;
+      font-size: 30px;
+      align-content: center;
+  }
+
+.grid-container4 {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 60px;
+      background-color: #D0DAE2;
+      padding: 100px;
+    border: 5px solid black;
+
+  }
+
+  .grid-container4 > div {
+      background-color: #D0DAE2;
+      text-align: center;
+      font-size: 30px;
+      
+  }
+
+  h1 {
+      font-family: Apple Chancery, cursive;
+      color: grey;
+      font-size: 40px;
+      border: 2px dotted grey;
+  }

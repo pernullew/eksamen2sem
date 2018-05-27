@@ -39,6 +39,8 @@
             transition: all .35s ease-in-out;
         }
 
+        /*Fontfamily body afgør at alt der ikke har fået en anden font, vil have Arial som fontfamily.*/
+
         body {
             background-color: #D0DAE2;
             font-family: 'Open Sans', Arial, sans-serif;
@@ -68,34 +70,104 @@
             top: 115px;
             left: 30%;
         }
-        
-        /*lyserød bølge*/
-        .bolge {
-            right: 500px;
+
+        /*Flexcontainer2 anvendes på forsiden. Den sætter billede og tekst i box.*/
+
+        .flex-container2 {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: #D0DAE2;
+            width: 1200px;
+        }
+
+        .flex-container2>div {
+            background-color: #D0DAE2;
+            width: 400px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            padding: 20px;
+            ;
+            font-size: 20px;
+        }
+
+        #logo {
             position: relative;
+            top: -90px;
+            right: 200px;
+        }
+
+        /*Grid der bruges til arrangementer på forsiden*/
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 60px;
+            background-color: #D0DAE2;
+            padding: 100px;
             
         }
+
+        .grid-container>div {
+            background-color: #D0DAE2;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        /*Grid til siden med arrangementtyper*/
+
+        .grid-container2 {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 30px;
+            background-color: #D0DAE2;
+            padding: 100px;
+            border: 2px solid grey;
+
+
+        }
+
+        .grid-container2>div {
+            background-color: #D0DAE2;
+            text-align: center;
+            font-size: 30px;
+
+        }
+
     </style>
 </head>
 
 <body>
 
+
+    <br>
+    <br>
+    <br>
+
     <nav class="mynav">
+
         <ul>
             <li>
-                <img src="Billeder/Kulturagenten-logo.png" id="logo" width="200" height="100" />
+                <img src="Billeder/Kulturagenten-logo.png" id="logo" width="300" height="160" />
             </li>
+
+
+            <li>
+                <a href="index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="om.html">Om Kulturagenten</a>
+            </li>
+            <li>
+                <a href="anbefalinger.html">Anbefalinger</a>
+            </li>
+            <li>
+                <a href="arrangementer.html">Arrangementer</a>
+            </li>
+
             <li>
                 <a href="kontakt.html">Kontakt</a>
-            </li>
-            <li>
-                <a href="cases.html">Anbefalinger</a>
-            </li>
-            <li>
-                <a href="Portfolio.html">Arrangementer</a>
-            </li>
-            <li>
-                <a href="index.html">Om Kulturagenten</a>
             </li>
         </ul>
     </nav>
@@ -117,19 +189,28 @@
     <br>
 
     <div class="container">
-        <center><img src="Billeder/bog-billede.png" width="1550" height="750"></center>
+        <center><img src="Billeder/bog-billede.png" width="1450" height="750"></center>
         <div class="top-center">Med kufferten fuld af sanser, eventyr,
             <br>kunst og kultur til børn</div>
     </div>
     <br>
     <br>
     <br>
+    <div class="grid-container">
+        <div><img src="Billeder/Sansecirkus.billede.png" width="390px;"></div>
+        <div><img src="Billeder/eventyrkuffert.png" width="390px;"></div>
+        <div><img src="Billeder/alacarte.png" width="390px;"></div>
+    </div>
     <br>
-    <div class="bolge">
-       <img src="Billeder/Billede1.png" width="2170px" height="700px"> 
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <!-- SnapWidget -->
+    <center><iframe src="https://snapwidget.com/embed/549731" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:20px; overflow:hidden; width:1458px; height:225px"></iframe></center>
+
+
 
     <footer>
         <a href=https://www.facebook.com/kulturagenten><img src="Billeder/facebook.png" width="50" height="50"></a>
@@ -175,6 +256,7 @@
             target.style.borderColor = color;
             target.style.transform = "none";
         }
+
     </script>
 
 </body>
