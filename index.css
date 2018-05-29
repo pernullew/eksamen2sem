@@ -153,34 +153,17 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       font-size: 30px;
       align-content: center;
   }
-/*grid til kontaktsiden*/
-
-    .grid-container4 {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 60px;
-      background-color: #D0DAE2;
-      padding: 100px;
 
 
-  }
 
-  .grid-container4 > div {
-      background-color: #D0DAE2;
-      text-align: center;
-      font-size: 30px;
-      text-align: left;
-      color: grey;
-  }
+  /*overskrifterne på siderne*/
 
-  
-/*overskrifterne på siderne*/
-h1 {
+  h1 {
       font-family: Apple Chancery, cursive;
       color: grey;
       font-size: 40px;
       border: 2px dotted grey;
-    
+
   }
 
 
@@ -335,7 +318,7 @@ h1 {
       font-size: 40px;
       text-align: center;
       top: 745px;
-      left: 830px
+      left: 1050px
   }
 
   .arrangement4 {
@@ -345,7 +328,7 @@ h1 {
       font-style: italic;
       font-size: 40px;
       text-align: center;
-      top: 750px;
+      top: 950px;
       left: 230px
   }
 
@@ -402,4 +385,40 @@ h1 {
       text-align: center;
       top: 750px;
       left: 230px
+  }
+
+  /*Kontaktsiden*/
+
+  .e-mail {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 565px;
+      left: 530px
+  }
+
+  .adresse {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 805px;
+      left: 530px
+  }
+
+  .telefon {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+
+      top: 695px;
+      left: 530px
   }
