@@ -153,27 +153,34 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       font-size: 30px;
       align-content: center;
   }
+/*grid til kontaktsiden*/
 
-  .grid-container4 {
+    .grid-container4 {
       display: grid;
       grid-template-columns: auto auto auto auto;
       grid-gap: 60px;
       background-color: #D0DAE2;
       padding: 100px;
-      border: 5px solid black;
+
+
   }
 
   .grid-container4 > div {
       background-color: #D0DAE2;
       text-align: center;
       font-size: 30px;
+      text-align: left;
+      color: grey;
   }
 
-  h1 {
+  
+/*overskrifterne på siderne*/
+h1 {
       font-family: Apple Chancery, cursive;
       color: grey;
       font-size: 40px;
       border: 2px dotted grey;
+    
   }
 
 
@@ -224,7 +231,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
   }
 
   p {
-      margin-top: -60px;
+      margin-top: -145px;
+      font-size: 18px;
   }
 
   body {
@@ -275,6 +283,25 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       color: #DF9283;
   }
 
+  /*kontaktsiden*/
+
+  .flex-container {
+      display: flex;
+      justify-content: center;
+      width: 1500px;
+
+  }
+
+  .flex-container > div {
+      width: 1000px;
+      margin: 80px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+  }
+
+
+
 
   /*Billedbeskrivelse til arrangementer*/
 
@@ -288,7 +315,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 745px;
       left: 230px
   }
-.arrangement2 {
+
+  .arrangement2 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -298,7 +326,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 745px;
       left: 685px
   }
- .arrangement3 {
+
+  .arrangement3 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -308,7 +337,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 745px;
       left: 830px
   }
- .arrangement4 {
+
+  .arrangement4 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -318,7 +348,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 750px;
       left: 230px
   }
- .arrangement5 {
+
+  .arrangement5 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -328,7 +359,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 750px;
       left: 230px
   }
- .arrangement6 {
+
+  .arrangement6 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -338,7 +370,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 750px;
       left: 230px
   }
- .arrangement7 {
+
+  .arrangement7 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -348,7 +381,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 750px;
       left: 230px
   }
- .arrangement8 {
+
+  .arrangement8 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;
@@ -358,7 +392,8 @@ flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
       top: 750px;
       left: 230px
   }
- .arrangement9 {
+
+  .arrangement9 {
       position: absolute;
       color: gray;
       font-family: Apple Chancery, cursive;

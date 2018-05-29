@@ -1,6 +1,3 @@
-
-
-
 /*Beskriver det basale ved hovereffekten, bl.a. farvevalg*/
 const target = document.querySelector(".target");
 const links = document.querySelectorAll(".mynav a");
@@ -16,7 +13,7 @@ for (let i = 0; i < links.length; i++) {
 
 
 
-/*Her beskrives at du kan se hvilken side du har klikket ´ */
+/*Her beskrives at du kan se hvilken side du har klikket på */
 function mouseenterFunc() {
     for (let i = 0; i < links.length; i++) {
         if (links[i].parentNode.classList.contains("active")) {
@@ -32,7 +29,7 @@ function mouseenterFunc() {
     this.parentNode.classList.add("active");
     this.style.opacity = "1";
     
-
+/*Man anvender nedstående metode til at defininere links'enes størrelse og deres position */
     const width = this.getBoundingClientRect().width;
     const height = this.getBoundingClientRect().height;
     const left = this.getBoundingClientRect().left;
