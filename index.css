@@ -10,9 +10,13 @@
 
   }
 
+  /*afstanden mellem siderne i navbaren*/
+
   .mynav li:not(:last-child) {
       margin-right: 20px;
   }
+
+  /*stylingen af teksten i navbaren*/
 
   .mynav a {
       display: block;
@@ -22,6 +26,8 @@
       padding: 7px 15px;
   }
 
+  /*hovereffekten under teksten*/
+
   .target {
       position: absolute;
       border-bottom: 4px solid transparent;
@@ -29,12 +35,16 @@
       transform: translateX(-60px);
   }
 
+  /*dette fortæller om hvor hurtigt det gåt fra at man 
+flytter musen til en side, til at hovereffekten følger med - dvs 0,35 sek*/
+
   .mynav a,
   .target {
       transition: all .35s ease-in-out;
   }
 
-  /*Fontfamily body afgør at alt der ikke har fået en anden font, vil have Arial som fontfamily.*/
+
+  /*bestemmer alt styling i bodyen der ikke ellers er angivet*/
 
   body {
       background-color: #D0DAE2;
@@ -42,19 +52,21 @@
 
   }
 
-  /*den lyserøde footer i bunden af siden*/
+  /*den lyserøde footer i bunden*/
 
   footer {
       padding: 1em;
       color: white;
       background-color: #F7D5C6;
-      clear: left;
       text-align: center;
+      margin-left: -100px;
+      padding: 0;
+      width: 1678px;
   }
 
-  /*Text over bogen*/
+  /*Text over bogen, forside*/
 
-  .container {
+  .container6 {
       position: relative;
       text-align: center;
       color: black;
@@ -62,13 +74,15 @@
       font-size: 45px;
   }
 
+  /*angiver hvor på siden teksten over bogen står*/
+
   .top-center {
       position: absolute;
       top: 115px;
       left: 30%;
   }
 
-  /*forside arrangementtyper*/
+  /*forside arrangementer, tekst*/
 
   .tiger {
       position: absolute;
@@ -94,26 +108,7 @@
       font-family: Apple Chancery, cursive;
   }
 
-  /*Flexcontainer2 anvendes på forsiden. Den sætter billede og tekst i box.*/
-
-  .flex-container2 {
-      display: flex;
-      flex-wrap: nowrap;
-      background-color: #D0DAE2;
-      width: 1200px;
-  }
-
-  .flex-container2 > div {
-      background-color: #D0DAE2;
-      width: 400px;
-      margin: 10px;
-      text-align: center;
-      line-height: 75px;
-      font-size: 30px;
-      padding: 20px;
-      ;
-      font-size: 20px;
-  }
+  /*fortæller om logoets placering på sitet*/
 
   #logo {
       position: relative;
@@ -130,34 +125,19 @@
       background-color: #D0DAE2;
       padding: 100px;
 
+
   }
 
   .grid-container > div {
       background-color: #D0DAE2;
       text-align: center;
       font-size: 30px;
+      text-align: left;
+      color: grey;
   }
 
-  /*Grid til siden med kontakt*/
 
-  .grid-container2 {
-      display: grid;
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 30px;
-      background-color: #D0DAE2;
-      padding: 70px;
-      border: 2px solid grey;
-
-
-  }
-
-  .grid-container2 > div {
-      background-color: #D0DAE2;
-      text-align: center;
-      font-size: 30px;
-
-  }
-/*arrangementer cirkler*/
+  /*arrangementer cirkler*/
 
   .grid-container3 {
       display: grid;
@@ -165,8 +145,6 @@
       background-color: #D0DAE2;
       padding: 20px;
       grid-row-gap: 40px;
-      
-
   }
 
   .grid-container3 > div {
@@ -176,21 +154,19 @@
       align-content: center;
   }
 
-.grid-container4 {
+  .grid-container4 {
       display: grid;
       grid-template-columns: auto auto auto auto;
       grid-gap: 60px;
       background-color: #D0DAE2;
       padding: 100px;
-    border: 5px solid black;
-
+      border: 5px solid black;
   }
 
   .grid-container4 > div {
       background-color: #D0DAE2;
       text-align: center;
       font-size: 30px;
-      
   }
 
   h1 {
@@ -198,4 +174,197 @@
       color: grey;
       font-size: 40px;
       border: 2px dotted grey;
+  }
+
+
+  /*Billedet af Kulturagenten på om-siden*/
+
+  .mia {
+      display: table-cell;
+      width: 350px;
+      height: auto;
+      border-radius: 50%;
+  }
+
+  /*hovereffekt på arrangementer*/
+
+  .container {
+      position: relative;
+      width: 50%;
+      overflow: hidden;
+      display: table-cell;
+      left: -10px;
+  }
+
+  .image {
+      display: table-cell;
+      width: 500px;
+      height: auto;
+      transition: all .4s ease-in;
+  }
+
+  .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 375px;
+      height: 175px;
+      opacity: 0;
+      transition: .5s ease;
+      background-color: rgba(50, 50, 50, 0.5);
+      color: white;
+      text-align: center;
+      padding-top: 40%;
+      left: 62px;
+      border-radius: 50%;
+  }
+
+  .container:hover .overlay {
+      opacity: 1;
+  }
+
+  p {
+      margin-top: -60px;
+  }
+
+  body {
+      margin-right: 100px;
+      margin-left: 100px;
+      background-color: #D0DAE2;
+  }
+
+  /*Citat på om-siden*/
+
+  .citat {
+      position: absolute;
+      top: 840px;
+      left: 400px;
+      color: #DF9283;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+  }
+
+  .citat2 {
+      position: absolute;
+      top: 1550px;
+      left: 750px;
+      color: #DF9283;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+  }
+
+  .citat3 {
+      position: absolute;
+      top: 1075px;
+      left: 200px;
+      color: grey;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+  }
+
+  /*Ramme på om- og kontaktsiden*/
+
+  .solid {
+      border-style: solid;
+      color: #DF9283;
+  }
+
+
+  /*Billedbeskrivelse til arrangementer*/
+
+  .arrangement {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 745px;
+      left: 230px
+  }
+.arrangement2 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 745px;
+      left: 685px
+  }
+ .arrangement3 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 745px;
+      left: 830px
+  }
+ .arrangement4 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 750px;
+      left: 230px
+  }
+ .arrangement5 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 750px;
+      left: 230px
+  }
+ .arrangement6 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 750px;
+      left: 230px
+  }
+ .arrangement7 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 750px;
+      left: 230px
+  }
+ .arrangement8 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 750px;
+      left: 230px
+  }
+ .arrangement9 {
+      position: absolute;
+      color: gray;
+      font-family: Apple Chancery, cursive;
+      font-style: italic;
+      font-size: 40px;
+      text-align: center;
+      top: 750px;
+      left: 230px
   }
